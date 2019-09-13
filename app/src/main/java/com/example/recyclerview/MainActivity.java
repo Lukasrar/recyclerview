@@ -31,14 +31,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int wordListSize = mWordList.size();
-                mWordList.addLast("+ Word " + wordListSize);
+                mWordList.addLast("+ Lukas " + wordListSize);
                 mRecyclerView.getAdapter().notifyItemInserted(wordListSize);
                 mRecyclerView.smoothScrollToPosition(wordListSize);
             }
         });
 
         for (int i = 0; i < 20; i++) {
-            mWordList.addLast("Word " + i);
+            mWordList.addLast("Lukas " + i);
         }
 
         mRecyclerView = findViewById(R.id.recyclerview);
