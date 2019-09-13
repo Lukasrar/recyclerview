@@ -1,4 +1,3 @@
-
 package com.example.recyclerview;
 
 import android.content.Context;
@@ -9,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.LinkedList;
-public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolder> {
+
+public class WordListAdapter extends
+        RecyclerView.Adapter<WordListAdapter.WordViewHolder> {
 
     private final LinkedList<String> mWordList;
     private final LayoutInflater mInflater;
@@ -29,8 +30,10 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
         @Override
         public void onClick(View view) {
             int mPosition = getLayoutPosition();
+
             String element = mWordList.get(mPosition);
-            mWordList.set(mPosition, "Clicked! " + element);
+
+            mWordList.set(mPosition, "Clicado! " + element);
             mAdapter.notifyDataSetChanged();
         }
     }
